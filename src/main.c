@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "bmp.h"
 
 int main(void){

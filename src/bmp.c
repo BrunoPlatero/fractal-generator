@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "bmp.h"
 
-void hello(void){
+void hello(){
     printf("Hello, Bruno!\n");
 }
