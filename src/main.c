@@ -1,6 +1,13 @@
 #include "bmp.h"
 
 int main(void){
-    hello();
-    return 0;
+	char fr[] = {
+		0, 0, 0,   
+		0, 0, 0,
+		0, 0, 0,  
+		0, 0, 0,
+		0, 0, 0,
+		0, 0, 0,
+	};
+	write_bmp("pixel.bmp", fr, sizeof(fr) / sizeof(char), 6);   
 }
