@@ -12,8 +12,6 @@ int main() {
 			bmp[i] = 10;
 		}
 	}
-		bmp[0] = 25;
-		bmp[1] = 0;
-		bmp[2] = 0;
+
     write_bmp("pixel.bmp", bmp, h * w * 3 , w);
 }
