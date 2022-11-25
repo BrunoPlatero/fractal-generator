@@ -15,7 +15,7 @@ void write_bmp(char *filename, char rgb[], int length, int width) {
     
     int bitmap_size = height * padded_width * 3;
     char *bitmap = (char *) malloc(bitmap_size * sizeof(char));
-    for (int i = 0; i < bitmap_size; i++) bitmap[i] = 0;
+    for (int i = 0; i < bitmap_size; i++) bitmap[i] = 0x00;
 
     // For each pixel in the RGB image...
     for (int row = 0; row < height; row++) {
