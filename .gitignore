@@ -1,0 +1,8 @@
+# directories
+pics/
+.cache/
+test/
+
+# file extensions
+*.o
+*.bmp
