@@ -5,8 +5,8 @@ BIN := bin
 
 # Compile Vars
 CC := clang
-CFLAGS := -I$(INCLUDE) -Wall -Wextra -Werror
-LDFLAGS :=
+CFLAGS := -I$(INCLUDE) -Wall -Wextra -Werror -fopenmp
+LDFLAGS := -lomp -L/lib/llvm-14/lib
 TARGET := $(BIN)/fractal
 
 all: clean $(TARGET)
@@ -28,7 +28,7 @@ clean:
 	rm -f bmp.o main.o fractal.o $(TARGET)
 
 run: all
-	./$(TARGET)
+	time ./$(TARGET)
 
 tidy: clean
 	mv *.bmp pics/
