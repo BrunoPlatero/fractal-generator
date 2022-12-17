@@ -13,6 +13,8 @@ void set_mandelbot(int world_x, int world_y, char *rgb, struct world_coordinates
     // Number of iterations to perform on n
     const int iterations = 255;
 
+    // Parallelise the outer for loop
+    #pragma omp parallel for
     // Mandelbrot function variables f(z) = z^2 + c
     for (int row = 0; row < world_y; row++){
         double cy = world.set_down + row * pixel_height;

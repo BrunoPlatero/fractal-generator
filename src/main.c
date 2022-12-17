@@ -19,10 +19,10 @@ int main() {
 	
 	struct world_coordinates world;
 
-	world.set_left = -2.5;
-    world.set_right = 1.5;
-    world.set_down = -2.0;
-    world.set_up = 2.0;
+	world.set_left = -0.864;
+    world.set_right = -0.860;
+    world.set_down = 0.230;
+    world.set_up = 0.234;
 
 	set_mandelbot(h, w, bmp, world);
 	write_bmp("test.bmp", bmp, datasize, w);
