@@ -4,6 +4,7 @@
 
 #include "bmp.h"
 
+
 // Internal function of this .c file (translation unit)
 static int round4(int x) {
     return x % 4 == 0 ? x : x - x % 4 + 4;
@@ -11,7 +12,8 @@ static int round4(int x) {
 
 void write_bmp(const char *filename, const char *rgb, int length, int width) {
     int height = (length / 3) / width;
-
+    static int screenshots_count = 0;
+    char new_filename[100];
     // Pad the width of the destination to a multiple of 4
     int padded_width = round4(width * 3);
 
@@ -33,14 +35,19 @@ void write_bmp(const char *filename, const char *rgb, int length, int width) {
             }
         }
     }
-
+    // BMP header default values
     char tag[] = { 'B', 'M' };
     int header[] = {
         0, 0, 0x36, 0x28, width, height, 0x180001, 
         0, 0, 0x002e23, 0x002e23, 0, 0
     };
+    
     header[0] = sizeof(tag) + sizeof(header) + bitmap_size;
-    FILE *fp = fopen(filename, "w+");
+    sprintf(new_filename, "%s_%d.bmp", filename, screenshots_count);
+    FILE *fp = fopen(new_filename, "w+");
+    screenshots_count ++;
+    
+    // Write .bmp data to stream
     fwrite(&tag, sizeof(tag), 1, fp);
     fwrite(&header, sizeof(header), 1, fp);
     fwrite(bitmap, bitmap_size * sizeof(char), 1, fp);

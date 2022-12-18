@@ -1,8 +1,10 @@
 # directories
-pics/
 .cache/
 test/
+bin/
+dist/
 
 # file extensions
 *.o
 *.bmp
+*.json
