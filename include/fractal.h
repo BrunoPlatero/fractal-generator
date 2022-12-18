@@ -2,10 +2,10 @@
 #define FRACTAL_H
 
 struct world_coordinates {
-    double set_left;
-    double set_right;
-    double set_down;
-    double set_up;
+    long double set_left;
+    long double set_right;
+    long double set_down;
+    long double set_up;
 };
 
 void set_mandelbot(int world_x, int world_y, char *rgb, struct world_coordinates world);
