@@ -14,22 +14,22 @@
 #define MOTION 0.06;
 
 void user_instructions() {
-		printf("\n\n\n");
-		for (int i = 0; i < 65; i++){
-			printf("*");
-		}
-		printf("\n");
-		printf("Welcome to the Mandelbrot Fractal.\nControls:\n\n");
-		printf("	    W:move up			I:zoom in\n");
-		printf("A:move left 		D:move right \n");
-		printf("	    S:move down			O:zoom out\n\n");
-		printf("Enter: take a screenshot of your favourite Mandelbrot spots\n\nPress Start\n");
-		for (int i = 0; i < 65; i++){
-			printf("*");
-		}
-		printf("\n");
-		getchar();
+	printf("\n\n\n");
+	for (int i = 0; i < 65; i++){
+		printf("*");
 	}
+	printf("\n");
+	printf("Welcome to the Mandelbrot Fractal.\nControls:\n\n");
+	printf("	    W:move up			I:zoom in\n");
+	printf("A:move left 		D:move right \n");
+	printf("	    S:move down			O:zoom out\n\n");
+	printf("Enter: take a screenshot of your favourite Mandelbrot spots\n\nPress Start\n");
+	for (int i = 0; i < 65; i++){
+		printf("*");
+	}
+	printf("\n");
+	getchar();
+}
 
 int main() {
 	// Init
