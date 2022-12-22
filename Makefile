@@ -2,34 +2,41 @@
 SRC := src
 INCLUDE := include
 BIN := bin
+DIST := dist
 
 # Compile Vars
-CC := clang
-CFLAGS := -I$(INCLUDE) -Wall -Wextra -Werror -fopenmp
-LDFLAGS := -lomp -L/lib/llvm-14/lib
+CC := gcc
+CFLAGS := -I$(INCLUDE) -Wall -Wextra -Werror -O3
+LDFLAGS := -fopenmp -flto -lSDL2
 TARGET := $(BIN)/fractal
 
-all: clean $(TARGET)
+all: clean setup $(TARGET)
 
-$(TARGET): bmp.o main.o fractal.o
-	$(CC) $(LDFLAGS) $^ -o $@
+setup:
+	mkdir -p $(BIN) $(DIST)
 
-bmp.o:
+$(TARGET): $(DIST)/bmp.o $(DIST)/main.o $(DIST)/fractal.o 
+	time $(CC) $(LDFLAGS) $^ -o $@ -lSDL2
+
+$(DIST)/bmp.o:
 	$(CC) $(CFLAGS) -c $(SRC)/bmp.c -o $@
 
-main.o:
+$(DIST)/main.o:
 	$(CC) $(CFLAGS) -c $(SRC)/main.c -o $@
 
-fractal.o:
-	$(CC) $(CFLAGS) -c $(SRC)/fractal.c -o $@
+$(DIST)/fractal.o:
+	$(CC) $(CFLAGS) -fopenmp -c $(SRC)/fractal.c -o $@
 
 clean:
-	rm -f $(TARGET)
-	rm -f bmp.o main.o fractal.o $(TARGET)
+	rm -rf $(BIN) $(DIST)
 
 run: all
-	time ./$(TARGET)
+	./$(TARGET)
 
 tidy: clean
+	mkdir -p pics/
 	mv *.bmp pics/
 
+# This makefile target requires bear. Do: 'sudo apt update' and 'sudo apt -y install bear'
+clangd:
+	bear --output compile_commands.json -- make
