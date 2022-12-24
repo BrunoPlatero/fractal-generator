@@ -81,8 +81,6 @@ Besides that, using the OpenMP compiler would critically improve the program's p
 
 Lastly, The O3 flag is an optimization flag that can be passed to the compiler. It tells the compiler to apply aggressive optimization techniques to the compiled code, aiming to produce faster and more efficient machine code. These optimization techniques may include inlining functions, vectorizing loops, and unrolling loops.
 
-### Conclusion
-
 
 ### Future improvements
 
