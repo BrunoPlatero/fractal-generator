@@ -66,7 +66,7 @@ The $(DIST)/bmp.o, $(DIST)/main.o, and $(DIST)/fractal.o targets specify how to 
 
 The 'clean' target removes the bin and dist directories.
 
-The 'run' target builds the program using the 'all' target and then runs the executable.
+The 'run' target builds the program using the 'all' target and then runs the executable. Use this command to try out this program. Download the directory, and in your terminal navigate to it and type 'make run'.
 
 The 'tidy' target cleans the directories and moves any .bmp files into a pics directory.
 
@@ -85,6 +85,20 @@ Lastly, The O3 flag is an optimization flag that can be passed to the compiler. 
 
 
 ### Future improvements
-It would have been appropriate to replace the if-else statement on main.c with a switch statement. Also in main.c, creating a function that takes a world* and translates it a certain amount would avoid code repetition. Then the function can be called with positive percent to move the world right or up, and negative percent to push it down or left. Likewise, another function could be created to scale the world* a certain amount. 
+
+It would have been appropriate to replace the if-else statement on main.c with a switch statement. Also in main.c, creating a function that takes a world* and translates it a certain amount would avoid code repetition. Then the function can be called with positive percent to move the world right or up, and negative percent to push it down or left. 
+Likewise, another function could be created to scale the world* a certain amount.
+
+Also, the program is only compatible for Linux users. Another future improvement would be to adapt it to be used in other Operating Systems.
 
 ### References
+
+https://www.livescience.com/42966-complex-numbers.html Complex numbers
+https://engineering.purdue.edu/ece264/16au/hw/HW13 BMP file
+https://plus.maths.org/content/what-mandelbrot-set#:~:text=For%20the%20Mandelbrot%20set%2C%20the,exactly%20what%20value%20c%20takes.&text=x1%20%3D%20x02%20%2B%20c.
+https://www.youtube.com/watch?v=MwjsO6aniig&t=100s Mandelbrot Set
+https://www.libsdl.org/ SDL
+https://dzone.com/articles/top-20-git-commands-with-examples GIT
+https://www.cs.colostate.edu/~cs157/LectureMakefile.pdf Makefile
+https://www.tutorialspoint.com/c_standard_library/c_function_fopen.htm fopen()
+https://www.geeksforgeeks.org/man-command-in-linux-with-examples/ man command linux
