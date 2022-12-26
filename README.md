@@ -89,6 +89,9 @@ It would have been appropriate to replace the if-else statement on main.c with a
 Likewise, another function could be created to scale the world* a certain amount.
 
 Also, the program is only compatible for Linux users. Another future improvement would be to adapt it to be used in other Operating Systems.
+To run this program, SDL library must be downloaded. Follow instructions in this link https://wiki.libsdl.org/SDL2/Installation
+OpenMP must also be downloaded https://www.openmp.org/
+
 
 ## References
 
