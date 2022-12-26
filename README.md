@@ -83,14 +83,14 @@ Besides that, using the OpenMP compiler would critically improve the program's p
 Lastly, The O3 flag is an optimization flag that can be passed to the compiler. It tells the compiler to apply aggressive optimization techniques to the compiled code, aiming to produce faster and more efficient machine code. These optimization techniques may include inlining functions, vectorizing loops, and unrolling loops.
 
 
-### Future improvements
+## Future improvements
 
 It would have been appropriate to replace the if-else statement on main.c with a switch statement. Also in main.c, creating a function that takes a world* and translates it a certain amount would avoid code repetition. Then the function can be called with positive percent to move the world right or up, and negative percent to push it down or left. 
 Likewise, another function could be created to scale the world* a certain amount.
 
 Also, the program is only compatible for Linux users. Another future improvement would be to adapt it to be used in other Operating Systems.
 
-### References
+## References
 
 https://www.livescience.com/42966-complex-numbers.html Complex numbers
 https://engineering.purdue.edu/ece264/16au/hw/HW13 BMP file
