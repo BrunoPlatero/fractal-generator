@@ -6,7 +6,7 @@ Welcome to the project memory of the implementation of the Mandelbrot set. The M
 
 To begin, let us define the Mandelbrot set. It is a set of complex numbers, which can be written as a + bi, where a and b are real numbers, and i is the imaginary unit defined as the square root of -1. The Mandelbrot set is the set of complex numbers c for which the function f(z) = z^2 + c does not diverge when iterated from z = 0. It means that a complex number c belongs to the Mandelbrot set if the sequence f(0), f(f(0)), [...] remains bounded in the complex plane when starting with z = 0 and applying the function f repeatedly.
 
-A computer program plots the set in the complex plane it is used and colours each point according to whether it belongs to the set. Points that belong to the Mandelbrot set are coloured black, while points that do not belong to the set are coloured according to how quickly the function f diverges for that point. The resulting image is highly detailed and intricate, with a repeating pattern that exhibits self-similarity at various scales.
+A computer program plots the set in the complex plane and colours each point according to whether it belongs to the set. Points that belong to the Mandelbrot set are coloured black, while points that do not belong to the set are coloured according to how quickly the function f diverges for that point. The resulting image is highly detailed and intricate, with a repeating pattern that exhibits self-similarity at various scales.
 
 The Mandelbrot set has several interesting properties and has been studied extensively by mathematicians and computer scientists. It is also popular among recreational mathematicians and featured in numerous books and articles. Despite its mathematical origins, the Mandelbrot set has also been embraced by the art world, with many artists creating works based on the set and its visual representations. In this project, there is the opportunity to explore the Mandelbrot set and its various characteristics in more detail.
 
@@ -14,8 +14,7 @@ One particularly noteworthy aspect of the Mandelbrot set is its fractal nature. 
 
 ## Implementation
 
-The objective of this project was to plot the Mandelbrot Set in the complex plane using a computer program written in C and SDL (Simple DirectMedia Layer) library.
-There are .c and .h files, along with a Makefile that compiles, links, and runs the program with one command. 
+The objective of this project was to plot the Mandelbrot Set in the complex plane using a computer program written in C. There are .c and .h files, along with a Makefile that compiles, links, and runs the program with one command. The Mandelbrot set is displayed using SDL (Simple DirectMedia Layer) library.
 
 ### fractal.c
 The provided code is a function called "set_mandelbot" that is used to plot the Mandelbrot set, a mathematical object defined as the set of complex numbers for which the function f(z) = z^2 + c does not diverge when iterated from z = 0. 
@@ -27,7 +26,7 @@ The circle's radius determines whether a complex number diverges or remains stab
 
 The function then uses an OpenMP directive to parallelize the outer for loop, which iterates over each row and column of the image. The function uses the Mandelbrot recursive formula for each pixel to determine whether the complex number corresponding to that pixel belongs to the Mandelbrot set or diverges. If the complex number diverges, the function sets the pixel to a specific colour based on the number of iterations performed. The function sets the pixel to black if the complex number remains stable. Therefore, it allows visualizing the Mandelbrot set as an image by colouring points that belong to the set differently from those that do not.
 
-Finally, the function writes the pixel data to the "RGB" array using the values stored in the "pixel" array. The function then returns, allowing the caller to write the pixel data to a bitmap image file or display it on the screen. The resulting image will be a visualization of the Mandelbrot set, with points that belong to the set coloured black and points that do not belong to the set coloured according to how quickly the function f diverges for that.
+Finally, the function writes the pixel data to the "RGB" array using the values stored in the "pixel" array. The function then returns, allowing the caller to  display on th screen the pixel data. The resulting image will be a visualization of the Mandelbrot set.
 
 ### bmp.c
 The write_bmp function converts a raw image stored in the RGB array into a bitmap image file with the .bmp format. The function receives four parameters: the filename of the new image, the raw image data stored in the RGB array, the length of the RGB array in bytes, and the image's width in pixels.
@@ -39,7 +38,7 @@ Next, the function allocates memory for a new array called bitmap, which will st
 The main processing of the function happens in a nested loop, where each pixel of the image is processed. The loop iterates through each row and column of the image, and for each pixel, it sets the corresponding values in the bitmap array. The pixel values are set using the values from the RGB array, which stores the image in the RGB format. The pixel values are stored in the opposite order in the BMP format, so the function uses the 2 - colour index.
 
 ### main.c
-The main function in this code initializes and sets up an SDL window and renderer, which will be used to display the Mandelbrot set. It also defines the world coordinates of the set, which will determine which area of the set is displayed in the window. The user is given instructions on how to interact with the program, and the program waits for the user to press a key before continuing.
+The main function in this code initializes and sets up an SDL window and renderer, which will be used to display the Mandelbrot set. It also defines the world coordinates of the set, which will determine which area of the set is displayed in the window. The user is given instructions on how to interact with the program, and the program waits for the user to press Enter before continuing.
 
 Once the window and renderer are set up, the program enters a loop until the user closes the window or quits the program. Within this loop, the program handles user input, generates a new frame of the Mandelbrot set based on the current world coordinates, and displays the frame in the window.
 
