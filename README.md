@@ -2,6 +2,8 @@
 
 ## Introduction
 
+![Fractal](/fractal.bmp)
+
 Welcome to the project memory of the implementation of the Mandelbrot set. The Mandelbrot set is a mathematical object that has fascinated mathematicians, computer scientists, and artists alike. This project aims to delve deeper into the properties and behaviour of the Mandelbrot set.
 
 To begin, let us define the Mandelbrot set. It is a set of complex numbers, which can be written as a + bi, where a and b are real numbers, and i is the imaginary unit defined as the square root of -1. The Mandelbrot set is the set of complex numbers c for which the function f(z) = z^2 + c does not diverge when iterated from z = 0. It means that a complex number c belongs to the Mandelbrot set if the sequence f(0), f(f(0)), [...] remains bounded in the complex plane when starting with z = 0 and applying the function f repeatedly.
