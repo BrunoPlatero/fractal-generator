@@ -89,6 +89,7 @@ To run this program there are a few mandatory prerequisites in order to compile 
 Firsty, the program is only compatible for Linux users. A future improvement would be to adapt it to be used in other Operating Systems.
 To run this program, SDL library must be downloaded. Follow instructions in this link https://wiki.libsdl.org/SDL2/Installation
 OpenMP must also be downloaded https://www.openmp.org/
+Then create a directory and download all the folders and files within this repository. Navigate into that directory and run "make run".
 
 
 ## Future improvements
