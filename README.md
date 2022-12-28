@@ -1,5 +1,7 @@
 # Mandelbrot Set
 
+## Video demo
+https://www.youtube.com/watch?v=9PnPCDkNnVE
 ## Introduction
 
 ![Fractal](/fractal.bmp)
