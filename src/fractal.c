@@ -2,7 +2,7 @@
 
 void set_mandelbot(int world_x, int world_y, char *rgb, struct world_coordinates world){    
 
-    // Define pixel size to acording to defined parameters
+    // Define pixel size acording to defined parameters
     const double pixel_width = (world.set_right - world.set_left) / world_x;
     const double pixel_height = (world.set_up - world.set_down) / world_y;
 
