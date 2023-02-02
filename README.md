@@ -96,7 +96,7 @@ Then create a directory and download all the folders and files within this repos
 
 ## Future improvements
 
-It would have been appropriate to replace the if-else statement on main.c with a switch statement. Also in main.c, creating a function that takes a world* and translates it a certain amount would avoid code repetition. Then the function can be called with positive percent to move the world right or up, and negative percent to push it down or left. 
+It would have been appropriate to replace the if-else statement on main.c with a switch statement. Also in main.c, creating a function that takes a world* and translates it a certain amount would avoid code repetition. Then the function can be called with positive percentage to move the world right or up, and negative percentage to push it down or left. 
 Likewise, another function could be created to scale the world* a certain amount.
 
 
